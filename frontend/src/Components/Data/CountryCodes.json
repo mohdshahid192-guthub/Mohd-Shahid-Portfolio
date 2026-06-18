@@ -1,0 +1,19 @@
+[
+  {"name": "Afghanistan", "code": "+93", "cca2": "AF"},
+  {"name": "Albania", "code": "+355", "cca2": "AL"},
+  {"name": "Algeria", "code": "+213", "cca2": "DZ"},
+  {"name": "American Samoa", "code": "+1684", "cca2": "AS"},
+  {"name": "Andorra", "code": "+376", "cca2": "AD"},
+  {"name": "Angola", "code": "+244", "cca2": "AO"},
+  {"name": "Argentina", "code": "+54", "cca2": "AR"},
+  {"name": "Australia", "code": "+61", "cca2": "AU"},
+  {"name": "Austria", "code": "+43", "cca2": "AT"},
+  {"name": "Bangladesh", "code": "+880", "cca2": "BD"},
+  {"name": "Canada", "code": "+1", "cca2": "CA"},
+  {"name": "China", "code": "+86", "cca2": "CN"},
+  {"name": "France", "code": "+33", "cca2": "FR"},
+  {"name": "Germany", "code": "+49", "cca2": "DE"},
+  {"name": "India", "code": "+91", "cca2": "IN"},
+  {"name": "United Kingdom", "code": "+44", "cca2": "GB"},
+  {"name": "United States", "code": "+1", "cca2": "US"}
+]
