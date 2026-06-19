@@ -12,12 +12,12 @@ const pageVariants = {
   center: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.7, ease: "easeInOut" }
+    transition: { duration: 0.5, ease: "easeInOut" }
   },
   exit: (dir) => ({
     x: dir > 0 ? "-100%" : "100%",
     opacity: 0,
-    transition: { duration: 0.7, ease: "easeInOut" }
+    transition: { duration: 0.5, ease: "easeInOut" }
   }),
 };
 
