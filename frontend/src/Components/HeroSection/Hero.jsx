@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { Link} from 'react-router-dom';
 import {faSquareGithub, faSquareLinkedin, faSquareInstagram, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
 import {ButtonOrange, ButtonTransparent}from '../index.js';
 import { useSmartNavigate } from '../../Hooks/SmartNavigate.js';
 
+
+
 export default function Hero() {
   const navigate = useSmartNavigate()
+
+
+
+
   return (
-<div className='min-h-[calc(100vh-16px)] bg-[#ffffff] grid md:grid-cols-2 place-items-center px-4 relative z-0 sm:grid-cols-3 dark:bg-slate-800 dark:text-white'>
+<div className='min-h-[calc(100vh-16px)] bg-[#ffffff] grid md:grid-cols-2 place-items-center px-4 relative z-0 sm:grid-cols-3 dark:bg-slate-800 dark:text-white pb-4 '
+>
   <div className='sm:col-span-1 h-full w-full flex items-center justify-center'>
     <div className='w-4/5 px-4 flex flex-col items-start gap-4 pt-18'>
       <ul className='flex'>
@@ -19,7 +26,7 @@ export default function Hero() {
         <Link to='https://www.facebook.com/share/1HFsbyD8Pe/' target='_blank'><FontAwesomeIcon icon={faSquareFacebook} className='text-4xl text-blue-800 dark:text-white' /></Link>
       </ul>
       <h1 className='text-5xl font-bold tracking-tight'>Hi, I'm Mohd Shahid</h1>
-      <p className='text-xl'>Motivated and detail-oriented Full Stack Developer with hands-on experience in developing responsive and user
+      <p className='text-xl' >Motivated and detail-oriented Full Stack Developer with hands-on experience in developing responsive and user
 friendly web applications using React, Tailwind CSS, Node.js, Express.js, and MongoDB. Skilled 
 in REST APIs, responsive design, database management, and software development lifecycle.</p>
       <div className='w-full flex gap-4 justify-center flex-col items-center md:flex-row pt-4'>

@@ -30,7 +30,7 @@ return(
 </div>
 
     <div className="px-2 grid place-items-center sm:col-span-2 md:col-span-1">
-       <form action="#" className="w-[80%] flex items-center justify-start gap-4 h-max pt-8 pb-6 px-4 flex-col shadow-md shadow-gray-300 bg-white dark:bg-slate-900/80  dark:shadow-gray-600 dark:text-white">
+       <form action="#" className="w-[80%] flex items-center justify-start gap-4 h-max pt-8 pb-6 px-4 flex-col shadow-lg shadow-gray-300 bg-white dark:bg-slate-900/80  dark:shadow-gray-800 dark:text-white">
         
         <h2 className="font-bold text-3xl text-center sm:text-start">My <span className="text-orange-600 dark:text-indigo-500">Skills</span></h2>
 

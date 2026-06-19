@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {NavLink } from 'react-router-dom'
 import { useTheme } from "../../Context/themeContext";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -13,10 +13,16 @@ const navigate = useSmartNavigate()
 
   const {theme, toggleTheme} = useTheme()
 
+ 
+
+
   return (
-    <div className="grid place-items-center pt-4 relative z-10 ">
-       <nav className="flex w-4/5 md:w-3/4  justify-between gap-2 bg-linear-to-br from-orange-300 via-orange-100 to-gray-100 shadow-lg rounded-xl h-12 items-center px-4 fixed top-4 dark:bg-none dark:bg-slate-900/80 dark:backdrop-blur-lg dark:text-white">
-        <h1 className="font-bold tracking-wide">Portfolio.</h1>
+    <div className="w-full grid place-items-center pt-4  ">
+     
+         <nav className="flex justify-between  z-50 w-4/5 md:w-3/4 bg-linear-to-br from-orange-300 via-orange-100 to-gray-100 shadow-lg rounded-xl h-12 items-center px-4  dark:bg-none dark:bg-slate-900/80 dark:backdrop-blur-lg dark:text-white
+          gap-2">
+       
+            <h1 className="font-bold tracking-wide">Portfolio.</h1>
        <ul className="hidden sm:flex font-bold gap-4">
         <li>
           <PrefetchNavLink 
@@ -65,9 +71,12 @@ const navigate = useSmartNavigate()
        <ButtonOrange width='w-18' height='h-8' btnText='Hire Me' textSize='text-sm' onClick={() => navigate('/contact')} />
 
       </div>
+       
+
      
        </nav>
 
-    </div>
+      </div>
+  
   )
 }

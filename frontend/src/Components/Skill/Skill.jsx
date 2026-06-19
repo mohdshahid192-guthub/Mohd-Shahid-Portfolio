@@ -4,8 +4,9 @@ import { faCss3, faHtml5, faJs, faMdb, faNodeJs, faPostgresql, faPython, faReact
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 export default function Skill(){
+  
 return(
-<div className='min-h-screen bg-[#ffffff] flex flex-col items-center pt-18 gap-8 dark:bg-slate-800 dark:text-white'>
+<div className='min-h-screen bg-[#ffffff] flex flex-col items-center pt-18 gap-8 dark:bg-slate-800 dark:text-white pb-4'>
 
     <h2 className="font-bold text-3xl text-center sm:text-start">My <span className="text-orange-600 dark:text-indigo-500">Skills</span></h2>
 
