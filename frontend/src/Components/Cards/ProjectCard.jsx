@@ -2,18 +2,19 @@ import React from "react";
 import ButtonRectangle from "../Buttons/ButtonRectangle";
 
 
+
 export default function ProjectCard({frontVal, backVal, src , name}){
 
    return(
-    <div className="w-full h-100 rounded-lg flex flex-col items-center justify-start gap-2 shadow-md shadow-gray-300 
-    dark:shadow-sm dark:shadow-gray-600 bg-white">
+    <div className="w-full h-100 rounded-lg flex flex-col items-center justify-start gap-2 shadow-lg shadow-gray-300 
+    dark:shadow-sm dark:shadow-gray-800 bg-white dark:bg-slate-900/80">
      
-     <div className="w-full h-[45%] border-b-2 border-gray-500">
+     <div className="w-full h-[45%] ">
       <img src={src} alt="ProjectImage" className="object-fill h-full w-full rounded-t-lg"/>
      </div>
 
     <div className="w-full h-full flex flex-col items-start justify-start px-2 gap-2">
-      <h2 className="text-xl font-bold text-orange-500 dark:text-indigo-500">{name}</h2>
+      <h2 className="text-xl font-bold text-orange-500 dark:text-indigo-600">{name}</h2>
       <h4 className="text-sm font-semibold text-gray-500">Complexity</h4>
       <div className="w-full">
 

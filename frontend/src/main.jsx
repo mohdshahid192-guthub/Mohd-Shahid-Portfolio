@@ -8,6 +8,7 @@ import { Hero, About, Skill, Project, Contact } from './Components/index.js'
 import { ThemeProvider } from './Context/themeContext.jsx'
 
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element= {<Layout />} >

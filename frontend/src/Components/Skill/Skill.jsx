@@ -1,37 +1,50 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SkillCard from "../Cards/SkillCard";
-import { faCss3, faHtml5, faJs, faMdb, faNodeJs, faPostgresql, faPython, faReact, faTailwindCss, faTypescript } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import useSkillsData from "../../Hooks/loadSkills"
 
-export default function Skill(){
-  
-return(
-<div className='min-h-screen bg-[#ffffff] flex flex-col items-center pt-18 gap-8 dark:bg-slate-800 dark:text-white pb-4'>
+const popScroll = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  }
+}
 
-    <h2 className="font-bold text-3xl text-center sm:text-start">My <span className="text-orange-600 dark:text-indigo-500">Skills</span></h2>
+export default function Skill() {
+const scrollContainerRef = useRef(null)
+const viewportConfig = {
+  root: scrollContainerRef,
+  amount: 0.2
+}
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full h-full  content-center justify-items-center px-4">
+const {skills, loading, error} = useSkillsData()
 
-       <SkillCard proficiency={97} skill="HTML 5" color='from-orange-500 to-orange-400' icon={faHtml5} iconColor='text-orange-400'/>
+
+  return (
+    <div className='min-h-[calc(100vh-64px)] bg-[#ffffff] flex flex-col items-center pt-18 gap-8 dark:bg-slate-800 dark:text-white pb-4'>
+
+      <h2 className="font-bold text-3xl text-center sm:text-start">My <span className="text-orange-600 dark:text-indigo-500">Skills</span></h2>
+
+      <div
+      ref={scrollContainerRef}
+       className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full h-[80vh-10px] content-start justify-items-center px-4">
+
+        {skills.map((s) => (
+          <motion.div key={s.icon} variants={popScroll} initial="hidden" whileInView="visible" viewport={viewportConfig} className="w-full h-max">
+
+            <SkillCard proficiency={s.proficiency} skill={s.name} color={s.color} icon={s.icon}iconColor={s.iconColor} />
+
+          </motion.div>
+        ))}
+
        
-        <SkillCard proficiency={97} skill="CSS 3" color='from-indigo-500 to-indigo-400' icon={faCss3} iconColor='text-indigo-500'/>
 
-  <SkillCard proficiency={90} skill="Tailwind CSS" color='from-blue-500 to-blue-400' icon={faTailwindCss} iconColor='text-blue-400'/>
-  
-         <SkillCard proficiency={95} skill="JavaScript" color='from-orange-500 to-orange-400' icon={faJs} iconColor='text-orange-400'/>
 
-   <SkillCard proficiency={80} skill="React" color='from-blue-500 to-blue-400' icon={faReact} iconColor='text-blue-400'/>
 
-   
 
-    <SkillCard proficiency={80} skill="Node.Js" color='from-green-500 to-green-400' icon={faNodeJs} iconColor='text-green-400'/>
-
-    <SkillCard proficiency={75} skill="TypeScript" color='from-blue-500 to-blue-400' icon={faTypescript} iconColor='text-blue-400'/>
-    <SkillCard proficiency={85} skill="MongoDB" color='from-green-500 to-green-400' icon={faMdb} iconColor='text-green-400'/>
-
-  
- 
+      </div>
     </div>
-  </div>
-)
+  )
 }

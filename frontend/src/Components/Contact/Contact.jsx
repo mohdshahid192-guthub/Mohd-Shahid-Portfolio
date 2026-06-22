@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputBox from '../Input/Input';
 import ButtonRectangle from '../Buttons/ButtonRectangle';
 import usePhoneCodes from '../../Hooks/PhoneCountryCode';
+import contactImage from "../../assets/ContactAvatar.png"
 
 export default function Contact(){
 const [firstName, setFirstName] = useState("")
@@ -22,17 +23,17 @@ const handleChange = (e) => {
 return(
 
 
-<div className=" min-h-[calc(100vh-16px)] dark:bg-slate-800 w-full h-auto  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2">
+<div className=" min-h-[calc(100vh-64px)] dark:bg-slate-800 w-full h-auto  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2">
 
 
 <div className="sm:grid place-items-center hidden pt-16">
-  <img src="/images/ContactAvatar.png" alt="" />
+  <img src={contactImage} alt="contact-image" />
 </div>
 
     <div className="px-2 grid place-items-center sm:col-span-2 md:col-span-1">
-       <form action="#" className="w-[80%] flex items-center justify-start gap-4 h-max pt-8 pb-6 px-4 flex-col shadow-lg shadow-gray-300 bg-white dark:bg-slate-900/80  dark:shadow-gray-800 dark:text-white">
+       <form action="#" className="w-[80%] flex items-center justify-start gap-4 h-max pt-8 pb-6 px-4 flex-col shadow-lg shadow-gray-300 bg-white dark:bg-slate-900/80  dark:shadow-gray-800 dark:text-white rounded-lg">
         
-        <h2 className="font-bold text-3xl text-center sm:text-start">My <span className="text-orange-600 dark:text-indigo-500">Skills</span></h2>
+        <h2 className="font-bold text-3xl text-center sm:text-start">Contact <span className="text-orange-600 dark:text-indigo-500">Me</span></h2>
 
         <div className='flex gap-2 w-full '>
              <InputBox

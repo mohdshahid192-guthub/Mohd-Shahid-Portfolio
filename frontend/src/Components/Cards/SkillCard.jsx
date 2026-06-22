@@ -1,16 +1,33 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faJs} from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faHtml5, faJs, faMdb, faNodeJs, faPostgresql, faPython, faReact, faTailwindCss, faTypescript } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+
+const iconMap = {
+  faCss3,
+  faHtml5,
+  faJs,
+  faMdb,
+  faNodeJs,
+  faPostgresql,
+  faPython,
+  faReact,
+  faTailwindCss,
+  faTypescript,
+  faDatabase
+};
 
 export default function SkillCard({skill, icon, proficiency, color, width, iconColor}){
+  
+  const selectedIcon = iconMap[icon] || icon;
 
    return(
     <div className="w-full h-45 rounded-lg flex flex-col items-center justify-start gap-2
     bg-white cursor-pointer text-black shadow-md shadow-gray-300 dark:bg-slate-900/80 dark:shadow-gray-800 dark:text-white ">
 
-      <div className="w-full h-max justify-start flex items-start px-2 py-4">
-      <div className="flex gap-1 items-center">
-          <FontAwesomeIcon icon={icon} className= {`${iconColor} text-4xl py-1 bg-gray-100 rounded-lg`}/>
+      <div className="w-full h-max justify-start flex items-start  px-4 py-4">
+      <div className="flex gap-2 items-center">
+          <FontAwesomeIcon icon={selectedIcon} className= {`${iconColor} text-4xl py-1 bg-gray-100 rounded-lg`}/>
              <h3 className="text-xl font-bold">{skill}</h3>
       </div>
    

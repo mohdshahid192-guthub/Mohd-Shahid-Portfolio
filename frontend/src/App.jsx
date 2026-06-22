@@ -12,12 +12,12 @@ const pageVariants = {
   center: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeInOut" }
+    transition: { duration: 0.4, ease: "easeInOut" }
   },
   exit: (dir) => ({
     x: dir > 0 ? "-100%" : "100%",
     opacity: 0,
-    transition: { duration: 0.5, ease: "easeInOut" }
+    transition: { duration: 0.4, ease: "easeInOut" }
   }),
 };
 
@@ -82,7 +82,7 @@ function Layout() {
        
           <NavBar />
    
-        <main className="flex flex-1 flex-col dark:bg-slate-800">
+        <main className="flex flex-1 flex-col dark:bg-slate-800 ]">
           <AnimatePresence mode='popLayout' custom={direction} >
             <motion.div
               key={location.pathname}

@@ -4,17 +4,26 @@ import { Link} from 'react-router-dom';
 import {faSquareGithub, faSquareLinkedin, faSquareInstagram, faSquareFacebook} from '@fortawesome/free-brands-svg-icons';
 import {ButtonOrange, ButtonTransparent}from '../index.js';
 import { useSmartNavigate } from '../../Hooks/SmartNavigate.js';
-
+import HeroImage from "../../assets/HeroAvatar.png"
+import useDownload from '../../Hooks/douwnloadButton.js';
 
 
 export default function Hero() {
   const navigate = useSmartNavigate()
 
+  const phoneNumber = "09696511877";
+  const message = encodeURIComponent("Hi! I have just visited your portfolio.");
+  
+  const handleWhatsAppRedirect = () => {
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
+const {downloadFile, downloading, error} = useDownload()
 
 
   return (
-<div className='min-h-[calc(100vh-16px)] bg-[#ffffff] grid md:grid-cols-2 place-items-center px-4 relative z-0 sm:grid-cols-3 dark:bg-slate-800 dark:text-white pb-4 '
+<div className='min-h-[calc(100vh-64px)] bg-[#ffffff] grid md:grid-cols-2 place-items-center px-4 relative z-0 sm:grid-cols-3 dark:bg-slate-800 dark:text-white pb-4 '
 >
   <div className='sm:col-span-1 h-full w-full flex items-center justify-center'>
     <div className='w-4/5 px-4 flex flex-col items-start gap-4 pt-18'>
@@ -31,14 +40,14 @@ friendly web applications using React, Tailwind CSS, Node.js, Express.js, and Mo
 in REST APIs, responsive design, database management, and software development lifecycle.</p>
       <div className='w-full flex gap-4 justify-center flex-col items-center md:flex-row pt-4'>
 
-      <ButtonOrange width='w-40' height='h-14' btnText='Download CV' textSize='text-lg' />
+      <ButtonOrange width='w-40' height='h-14' btnText={downloading ? "Downloading..." : "Download CV"} textSize='text-lg' onClick={() => downloadFile("/Mohd-Shahid-Resume.pdf", "Mohd-Shahid-Resume.pdf")}  />
      
-      <ButtonTransparent width='w-40' height='h-14' btnText='Contact Me' onClick={() => navigate('/contact')}/>
+      <ButtonTransparent width='w-40' height='h-14' btnText='Contact Me' onClick={handleWhatsAppRedirect}/>
       </div>
     </div>
   </div>
   <div className='h-full w-full flex items-center justify-center shrink-0 sm:col-span-2 md:col-span-1'>
-    <img className='sm:h-140 w-100  p-4' src='images/HeroAvatar.png' alt="Hero Image" />
+    <img className='sm:h-140 w-100  p-4' src={HeroImage} alt="Hero Image" />
   </div>
 </div>
     
