@@ -50,13 +50,13 @@ export default function ImageCarousel({ images = [] }) {
           <>
             <button
               onClick={() => navigateSlide(-1)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black/40 text-white opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-black/60 cursor-pointer z-20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black/40 text-white md:opacity-0 md:group-hover:opacity-100 transition duration-300 hover:bg-black/60 cursor-pointer z-20"
             >
               ‹
             </button>
             <button
               onClick={() => navigateSlide(1)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black/40 text-white opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-black/60 cursor-pointer z-20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black/40 text-white md:opacity-0 md:group-hover:opacity-100 transition duration-300 hover:bg-black/60 cursor-pointer z-20"
             >
               ›
             </button>
