@@ -2,23 +2,32 @@ import React from "react";
 import ButtonRectangle from "../Buttons/ButtonRectangle";
 import { useNavigate } from "react-router-dom";
 
-const prefetchImages = (urls) => {
-  if (!urls || !Array.isArray(urls)) return;
-  urls.forEach((url) => {
-    const img = new Image();
-    img.src = url;
-  });
-};
 
-const handlePrefetch = () => {
-    prefetchImages(carouselImages);
-  };
-
-export default function ProjectCard({id, frontVal, backVal, src , name, repo}){
+export default function ProjectCard({id, frontVal, backVal, src , name, repo, carouselImages}){
 
   const navigate = useNavigate()
 
   const repositoryLink = `https://github.com/mohdshahid192-guthub${repo}.git`
+
+  const handlePrefetch = () => {
+    if (!carouselImages || !Array.isArray(carouselImages)) return;
+
+    carouselImages.forEach((url) => {
+      // Create a unique clean ID for the link tag based on its URL string
+      const linkId = `prefetch-${url.replace(/[^a-zA-Z0-9]/g, '')}`;
+      
+      // Check if this image has already been appended to prevent duplicate network requests
+      if (!document.getElementById(linkId)) {
+        const link = document.createElement("link");
+        link.id = linkId;
+        link.rel = "prefetch";
+        link.href = url;
+        link.as = "image";
+        
+        document.head.appendChild(link);
+      }
+    });
+  };
 
    return(
     <div className="w-full h-105 rounded-lg flex flex-col items-center justify-start gap-2 shadow-lg shadow-gray-400 

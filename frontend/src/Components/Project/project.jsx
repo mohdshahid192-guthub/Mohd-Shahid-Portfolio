@@ -50,6 +50,7 @@ export default function Project() {
              backVal={project.backVal} 
              src={project.images[0]} 
              repo={project.repo} 
+             crouselImages={project.images}
              />
 
           </motion.div>
