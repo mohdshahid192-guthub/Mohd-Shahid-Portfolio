@@ -5,8 +5,13 @@
     "frontVal": 7,
     "backVal": 9,
     "images": [
-      "/ProjectsImages/PortfolioHome.png",
-      "/ProjectsImages/TestProject.png"
+      "/ProjectsImages/ServExpressHome.png",
+      "/ProjectsImages/ServExpressLogin.png",
+      "/ProjectsImages/ServExpressSignUp.png",
+      "/ProjectsImages/ServExpressProfile.png",
+      "/ProjectsImages/ServExpressBooking.png",
+      "/ProjectsImages/ServExpressOrder.png"
+      
     ],
     "description": "ServeExpress is an on-demand, peer-to-peer home services marketplace web application that directly connects independent professionals—including electricians, plumbers, carpenters, and painters—with local customers. Built to eliminate the traditional corporate middleman, the platform features deep profile customization that allows service providers to set their own custom charges and seamlessly update their operational radius if they relocate to another city. The application manages a time-sensitive booking workflow where professionals have a strict one-hour window to accept or reject an incoming request, keeping customer contact data and professional profiles securely hidden until a match is confirmed. To ensure secure and verified job fulfillment, the system utilizes a secure One-Time Password (OTP) verification cycle; once a job is complete, the customer provides an OTP to update the status to 'Served,' while an automated 24-hour expiration rule flags any unverified requests as 'Missed'.Designed for scalability, the platform's future roadmap includes a robust, peer-vetted rating and review system to establish trust and maintain quality control across the community.",
     "tools": ["HTML 5", "Tailwind CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Cloudinary", "Vite"],
