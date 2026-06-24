@@ -101,7 +101,7 @@ const navigate = useSmartNavigate()
         <li>
       <PrefetchNavLink 
           to='/project'
-          src={["ProjectsImages/TestProject.png", "ProjectsImages/PortfolioHome.png"]}
+          src={["/ProjectsImages/ServExpressHome.png", "/ProjectsImages/PortfolioHome.png"]}
           >
             Projects
           </PrefetchNavLink>

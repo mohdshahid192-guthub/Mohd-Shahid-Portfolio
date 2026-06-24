@@ -2,7 +2,17 @@ import React from "react";
 import ButtonRectangle from "../Buttons/ButtonRectangle";
 import { useNavigate } from "react-router-dom";
 
+const prefetchImages = (urls) => {
+  if (!urls || !Array.isArray(urls)) return;
+  urls.forEach((url) => {
+    const img = new Image();
+    img.src = url;
+  });
+};
 
+const handlePrefetch = () => {
+    prefetchImages(carouselImages);
+  };
 
 export default function ProjectCard({id, frontVal, backVal, src , name, repo}){
 
@@ -43,7 +53,7 @@ export default function ProjectCard({id, frontVal, backVal, src , name, repo}){
 
       </div>
        <div className="w-full flex gap-2 pt-4">
-       <ButtonRectangle width='w-1/2' height='h-10' btnText='More Details' onClick={() => navigate(`/project/${id}`)} bgNone={true}/>
+       <ButtonRectangle width='w-1/2' height='h-10' btnText='More Details' onClick={() => navigate(`/project/${id}`)} onMouseEnter={handlePrefetch} bgNone={true}/>
 
        <ButtonRectangle width='w-1/2' height='h-10' btnText='Repository' onClick={() => window.open(repositoryLink, '_blank')}/>
 
