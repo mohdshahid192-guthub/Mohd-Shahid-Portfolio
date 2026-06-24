@@ -7,5 +7,5 @@ import Project from "./Project/project";
 import ButtonOrange from "./Buttons/ButtonOrange";
 import PrefetchNavLink from "./PrefetchNavLink/PrefetchNavLink";
 import ButtonTransparent from "./Buttons/ButtonTransparen";
-
-export {NavBar, Hero, About, Skill, Project, Contact, ButtonOrange, PrefetchNavLink , ButtonTransparent}
+import ProjectDetails from "./Project/ProjectDetails";
+export {NavBar, Hero, About, Skill, Project, Contact, ButtonOrange, PrefetchNavLink , ButtonTransparent, ProjectDetails}

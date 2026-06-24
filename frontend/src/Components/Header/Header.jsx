@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
-import {NavLink } from 'react-router-dom'
+import React from "react";
 import { useTheme } from "../../Context/themeContext";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCircleHalfStroke} from '@fortawesome/free-solid-svg-icons';
 import {ButtonOrange, PrefetchNavLink} from "../index.js";
 import { useSmartNavigate } from "../../Hooks/SmartNavigate.js";
 import { delay, motion, time } from "framer-motion";
+import HeroImage from "../../assets/HeroAvatar.png"
+import AboutImage from "../../assets/AboutImage.png"
+import ContactImage from "../../assets/ContactAvatar.png"
 
-const watereffect = {
+const NAV_EXPAND_DURATION = 1.5
+const waterEffect = {
   hidden: {
     opacity: 0,
     width: "0%"
@@ -16,7 +19,7 @@ const watereffect = {
     opacity: [0, 1, 1, 1],
     width: ["0%", "var(--target-width)", "var(--shrink-width)", "var(--target-width)"],
     transition: {
-      duration: 1.5, 
+      duration: NAV_EXPAND_DURATION, 
       times: [0, 0.5, 0.75, 1],
      
       ease: [
@@ -37,7 +40,7 @@ const popUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.3, ease: "easeInOut", delay: 1.5
+      duration: 0.3, ease: "easeInOut", delay: NAV_EXPAND_DURATION
     }
   }
 }
@@ -56,7 +59,7 @@ const navigate = useSmartNavigate()
      
          <motion.nav className="flex justify-between  z-50 [--target-width:80%] [--shrink-width:65%] md:[--target-width:75%] md:[--shrink-width:60%] bg-linear-to-br from-orange-300 via-orange-100 to-gray-100 shadow-lg rounded-xl h-12 items-center px-4  dark:bg-none dark:bg-slate-900/80 dark:backdrop-blur-lg dark:text-white
           gap-2"
-          variants={watereffect}
+          variants={waterEffect}
           initial="hidden"
           animate="visible"
           
@@ -75,7 +78,7 @@ const navigate = useSmartNavigate()
         <li>
           <PrefetchNavLink 
           to='/'
-          src={['images/HeroAvatar.png']}
+          src={[HeroImage]}
           >
             Home
           </PrefetchNavLink>
@@ -83,7 +86,7 @@ const navigate = useSmartNavigate()
         <li>
          <PrefetchNavLink 
           to='/about'
-          src={['images/AboutImage.png']}
+          src={[AboutImage]}
           >
             About
           </PrefetchNavLink>
@@ -98,7 +101,7 @@ const navigate = useSmartNavigate()
         <li>
       <PrefetchNavLink 
           to='/project'
-          
+          src={["ProjectsImages/TestProject.png", "ProjectsImages/PortfolioHome.png"]}
           >
             Projects
           </PrefetchNavLink>
@@ -106,6 +109,7 @@ const navigate = useSmartNavigate()
         <li>
          <PrefetchNavLink 
           to='/contact'
+          src={[ContactImage]}
           >
             Contact
           </PrefetchNavLink>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "servexpress",
+    "name": "ServExpress",
+    "frontVal": 7,
+    "backVal": 9,
+    "images": [
+      "/ProjectsImages/PortfolioHome.png",
+      "/ProjectsImages/TestProject.png"
+    ],
+    "description": "ServeExpress is an on-demand, peer-to-peer home services marketplace web application that directly connects independent professionals—including electricians, plumbers, carpenters, and painters—with local customers. Built to eliminate the traditional corporate middleman, the platform features deep profile customization that allows service providers to set their own custom charges and seamlessly update their operational radius if they relocate to another city. The application manages a time-sensitive booking workflow where professionals have a strict one-hour window to accept or reject an incoming request, keeping customer contact data and professional profiles securely hidden until a match is confirmed. To ensure secure and verified job fulfillment, the system utilizes a secure One-Time Password (OTP) verification cycle; once a job is complete, the customer provides an OTP to update the status to 'Served,' while an automated 24-hour expiration rule flags any unverified requests as 'Missed'.Designed for scalability, the platform's future roadmap includes a robust, peer-vetted rating and review system to establish trust and maintain quality control across the community.",
+    "tools": ["HTML 5", "Tailwind CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Cloudinary", "Vite"],
+    "repo": "/ServExpress"
+  },
+  {
+    "id": "portfolio",
+    "name": "My Portfolio",
+    "frontVal": 9,
+    "backVal": 0,
+    "images": [
+      "/ProjectsImages/PortfolioHome.png",
+      "/ProjectsImages/PortfolioAbout.png",
+      "/ProjectsImages/PortfolioSkills.png",
+      "/ProjectsImages/PortfolioCertificates.png"
+    ],
+     "description": "This sleek and modern personal portfolio website is built to showcase my professional journey, skills, and projects within a highly responsive and visually compelling interface. Powered by Framer Motion, the platform features fluid animations and polished micro-interactions that elevate the overall user experience. It cleanly organizes my academic history, professional certifications, and a dedicated 'About' section, while offering a direct-download link for my resume and a functional contact section for seamless networking. Furthermore, the portfolio includes a comprehensive gallery that provides interactive, detailed deep-dives into individual projects, highlighting their core architecture, features, and workflows.",
+    "tools": ["React.js", "Tailwind CSS", "JavaScript", "Vite", "Framer Motion"],
+    "repo": "/Mohd-Shahid-Portfolio"
+  }
+]

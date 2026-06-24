@@ -4,8 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Layout from './App.jsx'
-import { Hero, About, Skill, Project, Contact } from './Components/index.js'
+import { Hero, About, Skill, Project, Contact, ProjectDetails } from './Components/index.js'
 import { ThemeProvider } from './Context/themeContext.jsx'
+
 
 
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
     <Route path='about' element={<About />}/>
     <Route path='skill' element={<Skill />}/>
     <Route path='project' element={<Project />}/>
+    <Route path='project/:id' element={<ProjectDetails />}/>
     <Route path='contact' element={<Contact />}/>
     </Route>
   )

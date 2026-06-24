@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import SkillCard from "../Cards/SkillCard";
+import SkillCard from "./SkillCard";
 import { motion } from "framer-motion";
 import useSkillsData from "../../Hooks/loadSkills"
 
@@ -23,7 +23,7 @@ const {skills, loading, error} = useSkillsData()
 
 
   return (
-    <div className='min-h-[calc(100vh-64px)] bg-[#ffffff] flex flex-col items-center pt-18 gap-8 dark:bg-slate-800 dark:text-white pb-4'>
+    <div className='min-h-[calc(100vh-64px)] bg-[#ffffff] flex flex-col items-center pt-18 gap-8 dark:bg-slate-800 dark:text-white pb-4 md:px-8'>
 
       <h2 className="font-bold text-3xl text-center sm:text-start">My <span className="text-orange-600 dark:text-indigo-500">Skills</span></h2>
 

@@ -42,7 +42,7 @@ in REST APIs, responsive design, database management, and software development l
 
       <ButtonOrange width='w-40' height='h-14' btnText={downloading ? "Downloading..." : "Download CV"} textSize='text-lg' onClick={() => downloadFile("/Mohd-Shahid-Resume.pdf", "Mohd-Shahid-Resume.pdf")}  />
      
-      <ButtonTransparent width='w-40' height='h-14' btnText='Contact Me' onClick={handleWhatsAppRedirect}/>
+      <ButtonTransparent width='w-40' height='h-14' btnText='Contact Me' textSize="text-lg" onClick={handleWhatsAppRedirect}/>
       </div>
     </div>
   </div>

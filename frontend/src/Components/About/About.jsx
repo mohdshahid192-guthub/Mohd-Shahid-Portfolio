@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { ButtonOrange, ButtonTransparent } from '../index.js';
 import Certificate from "../Cetificates/Certificate.jsx";
 import AboutImage from "../../assets/AboutImage.png"
-import EducationCard from "../Cards/EducationCard.jsx";
+import EducationCard from "../Education/EducationCard.jsx";
 import Education from "../Education/Education.jsx";
 
 export default function About() {

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import CertificateCard from "../Cards/CertificateCards";
+import CertificateCard from "./CertificateCards";
 import ButtonRectangle from "../Buttons/ButtonRectangle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {motion} from "framer-motion";
